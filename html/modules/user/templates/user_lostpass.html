@@ -1,5 +1,5 @@
 <{if $actionForm->hasError()}>
-<div class="errorMsg">
+<div class="alert alert-error">
   <ul>
     <{foreach item=message from=$actionForm->getErrorMessages()}>
       <li><{$message}></li>
@@ -10,7 +10,7 @@
 
 <form action="#" method="post">
 <{xoops_token form=$actionForm}>
-<table class="outer">
+<table class="table">
   <tr>
     <th colspan="2" style="text-align:center;"><{$smarty.const._MD_USER_LANG_LOSTPASSWORD}></th>
   </tr>

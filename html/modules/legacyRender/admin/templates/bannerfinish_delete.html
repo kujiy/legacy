@@ -12,7 +12,7 @@
 <form method="post" action="./index.php?action=BannerfinishDelete">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=bid value=$actionForm->get('bid')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2"><{$smarty.const._AD_LEGACYRENDER_LANG_BANNERFINISH_DELETE}></th>
     </tr>
@@ -42,8 +42,8 @@
     </tr>
     <tr>
       <td class="foot" colspan="2">
-        <input class="formButton" type="submit" value="<{$smarty.const._DELETE}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-warning" type="submit" value="<{$smarty.const._DELETE}>"><{$smarty.const._DELETE}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

@@ -31,7 +31,7 @@
 <form action="" method="post">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=uid value=$actionForm->get('uid')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2">
       <{if $actionForm->get('uid')}>
@@ -222,8 +222,8 @@
     <{legacy_profile template=profile_inc_data_edit.html action=edit actionForm=$actionForm}>
     <tr>
       <td colspan="2"  class="foot">
-        <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

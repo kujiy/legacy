@@ -1,5 +1,5 @@
 <{if $actionForm->hasError()}>
-<div class="errorMsg">
+<div class="alert alert-error">
   <ul>
     <{foreach item=message from=$actionForm->getErrorMessages()}>
       <li><{$message}></li>
@@ -8,11 +8,11 @@
 </div>
 <{/if}>
 
-<div class='confirmMsg'>
-  <h4><{$self_delete_message|nl2br}></h4>
+  <h1><{$self_delete_message|nl2br}></h1>
   <form method="post" action="#">
+    <fieldset>
     <{xoops_token form=$actionForm}>
-    <input type="submit" value="<{$smarty.const._DELETE}>" />
-    <input type="button" name="confirm_back" value="<{$smarty.const._CANCEL}>"  onclick="javascript:history.go(-1);" />
+    <button class="btn btn-primary" type="submit" value="<{$smarty.const._DELETE}>"><{$smarty.const._DELETE}></button>
+    <button class="btn" type="button" name="confirm_back" value="<{$smarty.const._CANCEL}>"  onclick="javascript:history.go(-1);"><{$smarty.const._CANCEL}></button>
+    </fieldset>
   </form>
-</div>

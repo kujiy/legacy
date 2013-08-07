@@ -61,11 +61,11 @@
       <{/if}>
     <{/foreach}>
   </select>
-  <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
+  <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
 </form>
 </div>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._AD_LEGACY_LANG_BID}>
       <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.NEWBLOCKS_SORT_KEY_BID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>

@@ -1,22 +1,20 @@
 <form action="#" method="post">
-<table width="100%" class="outer">
-  <tr>
-    <td class="head"><{$smarty.const._MD_USER_LANG_NICKNAME}></td>
-    <td class="<{cycle values="odd,even"}>">
+<fieldset>
+  <div class="control-group">
+    <label for="" class="control-label"><{$smarty.const._MD_USER_LANG_NICKNAME}></label>
+    <div class="controls">
       <{$registForm->get('uname')|xoops_escape}>
-    </td>
-  </tr>
-  <tr>
-    <td class="head"><{$smarty.const._MD_USER_LANG_EMAIL}></td>
+    </div>
+  </div>
+  <div class="control-group">
+    <td class="head"><{$smarty.const._MD_USER_LANG_EMAIL}></label>
     <td class="<{cycle values="odd,even"}>">
       <{$registForm->get('email')|xoops_escape}>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="foot" style="text-align:center;">
-      <input type="submit" value="<{$smarty.const._MD_USER_LANG_FINISH}>" />
-      <input type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel" />
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-primary" type="submit" value="<{$smarty.const._MD_USER_LANG_FINISH}>"><{$smarty.const._MD_USER_LANG_FINISH}></button>
+    <button class="btn" type="submit" value="<{$smarty.const._CANCEL}>" name="_form_control_cancel"><{$smarty.const._CANCEL}></button>
+  </div>
+</fieldset>
 </form>

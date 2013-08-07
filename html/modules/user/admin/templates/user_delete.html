@@ -21,7 +21,7 @@
 <form action="?action=UserDelete" method="post">
 <{xoops_token form=$actionForm}>
 <{xoops_input type=hidden name=uid value=$object->get('uid')}>
-<table class="outer">
+<table class="table">
   <tr>
     <th colspan="2"><{$smarty.const._AD_USER_LANG_USER_DELETE}> (<{$object->getShow('uname')}>)</th>
   </tr>
@@ -55,8 +55,8 @@
   </tr>
   <tr>
     <td colspan="2" class="foot">
-        <input class="formButton" type="submit" value="<{$smarty.const._DELETE}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-warning" type="submit" value="<{$smarty.const._DELETE}>"><{$smarty.const._DELETE}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
     </td>
   </tr>
 </table>

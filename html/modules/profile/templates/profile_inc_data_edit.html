@@ -1,7 +1,7 @@
 	<{foreach item=def from=$defArr}>
-	<tr>
-    <td class="head"><{$def->get('label')}></td>
-    <td class="<{cycle values="odd,even"}>">
+	<div class="control-group">
+    <label for="<{$def->getShow('field_name')}>" class="control-label"><{$def->get('label')}></div>
+    <div class="controls">
     	<{if $def->get('type')=="string"}>
       <{xoops_input type=text name=$def->getShow('field_name') value=$profileForm->get($def->getShow('field_name'))  size=40 maxlength=255}>
       <{elseif $def->get('type')=="int" || $def->get('type')=="float"}>
@@ -28,6 +28,6 @@
       <{xoops_input type=text name=$def->getShow('field_name') value=$profileForm->get($def->getShow('field_name'), 1)}>
       <{/if}>
       <div class="description"><{$def->getShow('description')}></div>
-    </td>
-  </tr>
+    </div>
+  </div>
 	<{/foreach}>

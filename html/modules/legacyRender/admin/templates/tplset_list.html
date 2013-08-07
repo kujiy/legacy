@@ -37,7 +37,7 @@
 <{assign var=tokenName value=$actionForm->getTokenName()}>
 <{assign var=token value=$actionForm->getToken()}>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._AD_LEGACYRENDER_LANG_TPLSET_ID}>
       <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.TPLSET_SORT_KEY_TPLSET_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>
@@ -106,7 +106,7 @@
 <hr />
 <h4 class="admintitle"><{$smarty.const._AD_LEGACYRENDER_LANG_RECENT_MODIFY_FILES}></h4>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_ID}></th>
     <th><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_MODULE}></th>

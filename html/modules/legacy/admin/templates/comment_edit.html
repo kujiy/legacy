@@ -29,7 +29,7 @@
 <form action="" method="post">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=com_id value=$actionForm->get('com_id')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <td class="head"><{$smarty.const._MD_LEGACY_LANG_COM_TITLE}></td>
       <td class="<{cycle values="odd,even"}>">
@@ -77,8 +77,8 @@
     </tr>
     <tr>
       <td colspan="2" class="foot">
-        <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

@@ -19,7 +19,7 @@
 <form action="#" method="post">
 <{xoops_token form=$actionForm}>
 <{xoops_input type=hidden name=mailjob_id value=$actionForm->get('mailjob_id')}>
-<table class="outer">
+<table class="table">
   <tr>
     <th></th>
     <th><{$smarty.const._MD_USER_LANG_UID}><br />
@@ -43,7 +43,7 @@
     </tr>
   <{/foreach}>
   <tr>
-    <td colspan="5" class="foot"><input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" /></td>
+    <td colspan="5" class="foot"><button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button></td>
   </tr>
 </table>
 </form>

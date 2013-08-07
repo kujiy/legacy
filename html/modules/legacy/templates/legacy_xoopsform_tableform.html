@@ -1,6 +1,6 @@
 <{$form->getTitle()}>
 <form name='<{$form->getName()}>' id='<{$form->getName()}>' action='<{$form->getAction()}>' method='<{$form->getMethod()}>' <{$form->getExtra()}> >
-  <table style="width:100%;" cellspacing="1">
+  <table style="width:100%;">
     <{foreach from=$form->getElements() item=element}>
       <{if is_object($element) }>
         <{if !$element->isHidden()}>

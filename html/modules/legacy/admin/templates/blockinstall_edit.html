@@ -22,7 +22,7 @@
   <{if !$hasVisibleOptionForm && $optionForm != null}>
     <{$optionForm}>
   <{/if}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2"><{$smarty.const._AD_LEGACY_LANG_BLOCK_INSTALL}></th>
     </tr>
@@ -81,7 +81,7 @@
     <tr>
       <td colspan="2" class="foot">
         <input class="formButton" type="submit" value="<{$smarty.const._INSTALL}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

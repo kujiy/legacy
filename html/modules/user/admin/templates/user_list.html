@@ -60,13 +60,13 @@
       <{/if}>
     <{/foreach}>
   </select>
-  <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
+  <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
 </form>
 </div>
 
 <form name="userlistform" method="post" action="./index.php?action=UserList">
   <{xoops_token form=$actionForm}>
-<table class="outer">
+<table class="table">
   <tr>
     <th>&nbsp;</th>
     <th><{$smarty.const._MD_USER_LANG_UID}>

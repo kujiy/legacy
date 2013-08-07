@@ -66,13 +66,13 @@
       <{/if}>
     <{/foreach}>
   </select>
-  <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
+  <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
 </form>
 </div>
 
 <form name="commentlistform" method="post" action="./index.php?action=CommentList">
   <{xoops_token form=$actionForm}>
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._MD_LEGACY_LANG_COM_ID}>
       <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.COMMENT_SORT_KEY_COM_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>

@@ -28,7 +28,7 @@
 <form action="?action=AvatarEdit" method="post" enctype="multipart/form-data">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=avatar_id value=$actionForm->get('avatar_id')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2">
         <{if $actionForm->get('avatar_id')}>
@@ -81,8 +81,8 @@
     </tr>
     <tr>
       <td class="foot" colspan="2">
-        <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

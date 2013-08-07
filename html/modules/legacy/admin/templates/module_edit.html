@@ -19,7 +19,7 @@
 <form action="index.php?action=ModuleEdit" method="post">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=mid value=$actionForm->get('mid')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2"><{$smarty.const._AD_LEGACY_LANG_MOD_EDIT}></th>
     </tr>
@@ -101,8 +101,8 @@
   </tr>
     <tr>
       <td class="foot" colspan="2">
-        <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

@@ -10,7 +10,7 @@
 <form action="index.php?action=DataEdit" method="post">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=uid value=$actionForm->get('uid')}>
-  <table class="outer">
+  <table class="table">
     <tr>
     <{if $actionForm->get('uid')}>
       <th colspan="2"><{$smarty.const._MD_PROFILE_LANG_DATA_EDIT}></th>

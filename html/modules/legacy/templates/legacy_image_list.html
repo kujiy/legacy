@@ -30,28 +30,30 @@ return;
 //-->
 </script>
 
-<form method="get" action="<{$smarty.const.XOOPS_URL}>/imagemanager.php?op=list" style="margin:10px;">
-  <input type="hidden" name="target" value="<{$target}>" />
-  <select name="imgcat_id" onchange="location='<{$smarty.const.XOOPS_URL}>/imagemanager.php?target=<{$target}>&amp;imgcat_id='+this.options[this.selectedIndex].value">
-    <option id="imgcat_id_0" value="0">---</option>
-    <{xoops_optionsArray id=imgcat_id from=$categoryArr value=imgcat_id label=imgcat_name default=$imgcatId}>
-  </select>
-  <input type="submit" value="<{$smarty.const._SUBMIT}>" />
+<form method="get" action="<{$smarty.const.XOOPS_URL}>/imagemanager.php?op=list">
+  <fieldset>
+    <input type="hidden" name="target" value="<{$target}>" />
+    <select name="imgcat_id" onchange="location='<{$smarty.const.XOOPS_URL}>/imagemanager.php?target=<{$target}>&amp;imgcat_id='+this.options[this.selectedIndex].value">
+      <option id="imgcat_id_0" value="0">---</option>
+      <{xoops_optionsArray id=imgcat_id from=$categoryArr value=imgcat_id label=imgcat_name default=$imgcatId}>
+    </select>
+    <button class="btn btn-primary" type="submit" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+  </fieldset>
 </form>
 
 <{if $hasUploadPerm}>
   <div style="text-align:right; margin:5px;">[ <a href="<{$smarty.const.XOOPS_URL}>/imagemanager.php?op=upload&amp;imgcat_id=<{$category->getShow('imgcat_id')}>&amp;target=<{$target|xoops_escape}>"><{$smarty.const._MD_LEGACY_LANG_IMAGE_UPLOAD}></a> ]</div>
 <{/if}>
 
-<table class="outer" cellspacing="1">
+<table class="table">
   <tr>
-    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_NICENAME}>
-    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE}>
-    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_MIMETYPE}>
-    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_POSITION}>
+    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_NICENAME}></th>
+    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE}></th>
+    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_MIMETYPE}></th>
+    <th><{$smarty.const._MD_LEGACY_LANG_IMAGE_POSITION}></th>
   </tr>
   <{foreach item=obj from=$objects}>
-    <tr class="<{cycle values='odd,even'}>" style="text-align:center;">
+    <tr>
       <td><{$obj->getShow('image_nicename')}></td>
       <td>
         <{if $obj->mImageCategory != null}>
@@ -78,8 +80,8 @@ return;
   <{/foreach}>
 </table>
 
-<div class="pagenavi" style="text-align:center; margin:5px;"><{xoops_pagenavi pagenavi=$pageNavi}></div>
+<div class="pagenavi"><{xoops_pagenavi pagenavi=$pageNavi}></div>
 
-<div id="footer" style="text-align:center; margin:5px;">
-  <input value="<{$smarty.const._CLOSE}>" type="button" onclick="javascript:window.close();" />
+<div id="footer">
+  <button class="btn" value="<{$smarty.const._CLOSE}>" type="button" onclick="javascript:window.close();"><{$smarty.const._CLOSE}></button>
 </div>

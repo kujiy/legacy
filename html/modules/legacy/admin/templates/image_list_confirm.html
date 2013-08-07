@@ -22,7 +22,7 @@
 <form method="post"  action="./index.php?action=ImageList">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=confirm value=1}>
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._AD_LEGACY_LANG_IMAGE_ID}></th>
     <th><{$smarty.const._AD_LEGACY_LANG_IMAGE_NAME}></th>
@@ -103,7 +103,7 @@
     <td class="foot" colspan="6">
       <input type="hidden" name="imgcatid" value="<{$category->getShow('imgcat_id')}>" />
       <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton" />
-      <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+      <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
     </td>
   </tr>
 </table>

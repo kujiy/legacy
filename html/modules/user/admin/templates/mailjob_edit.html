@@ -28,7 +28,7 @@
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=mailjob_id value=$actionForm->get('mailjob_id')}>
   <{xoops_explaceholder control=UserPagenaviHidden pagenavi=$pageNavi}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2">
         <{if $actionForm->get('mailjob_id')}>
@@ -79,8 +79,8 @@
     </tr>
     <tr>
       <td colspan="2" class="foot">
-        <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>

@@ -1,28 +1,26 @@
 <form action="<{$xoops_url}>/user.php" method="post">
-<{xoops_input type=hidden name=op value=login}>
-<{xoops_input type=hidden name=xoops_redirect value=$redirect_page}>
-<table class="outer">
-  <tr>
+<fieldset>
+  <{xoops_input type=hidden name=op value=login}>
+  <{xoops_input type=hidden name=xoops_redirect value=$redirect_page}>
+  <div class="control-group">
     <th colspan="2" style="text-align:center;"><{$smarty.const._LOGIN}></th>
-  </tr>
-  <tr>
-    <td class="head"><{$smarty.const._USERNAME}></td>
-    <td class="<{cycle values="odd,even"}>">
+  </div>
+  <div class="control-group">
+    <label for="uname" class="control-label"><{$smarty.const._USERNAME}></label>
+    <div class="controls">
       <{xoops_input type=text name=uname size=25 maxlength=25 value=$usercookie}>
-    </td>
-  </tr>
-  <tr>
-    <td class="head"><{$smarty.const._PASSWORD}></td>
-    <td class="<{cycle values="odd,even"}>">
+    </div>
+  </div>
+  <div class="control-group">
+    <label for="password" class="control-label"><{$smarty.const._PASSWORD}></label>
+    <div class="controls">
      <{xoops_input type=password name=pass size=30 maxlength=32}>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" class="foot" style="text-align:center;">
-      <input type="submit" value="<{$smarty.const._LOGIN}>" />
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+  <div class="control-actions">
+    <button class="btn btn-primary" type="submit" value="<{$smarty.const._LOGIN}>"><{$smarty.const._LOGIN}></button>
+  </div>
+</fieldset>
 </form>
 
 <{if $allowRegister}>

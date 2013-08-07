@@ -11,7 +11,7 @@
 <form method="post" action="./index.php?action=CommentDelete">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=com_id value=$actionForm->get('com_id')}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th colspan="2"><{$smarty.const._AD_LEGACY_LANG_COMMENT_DELETE}></th>
     </tr>
@@ -113,8 +113,8 @@
     </tr>
     <tr>
       <td colspan="2" class="foot">
-        <input class="formButton" type="submit" value="<{$smarty.const._DELETE}>" />
-        <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+        <button class="btn btn-warning" type="submit" value="<{$smarty.const._DELETE}>"><{$smarty.const._DELETE}></button>
+        <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
       </td>
     </tr>
   </table>
@@ -122,7 +122,7 @@
 
 <h3 class="admintitle"><{$smarty.const._AD_LEGACY_MESSAGE_CHILDREN_DELETED_TOGETHER}></h3>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._MD_LEGACY_LANG_COM_ID}><br />
     <th><{$smarty.const._MD_LEGACY_LANG_COM_MODID}><br />

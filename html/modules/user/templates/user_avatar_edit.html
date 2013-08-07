@@ -5,7 +5,7 @@
 
 <{if $allowUpload}>
 <{if $actionForm->hasError()}>
-<div class="errorMsg">
+<div class="alert alert-error">
   <ul>
     <{foreach item=message from=$actionForm->getErrorMessages()}>
       <li><{$message|xoops_escape}></li>
@@ -17,12 +17,12 @@
 <form action="<{$xoops_url}>/edituser.php?op=avatarupload" method="post" enctype="multipart/form-data">
   <{xoops_token form=$actionForm}>
   <{xoops_input type=hidden name=uid value=$actionForm->get('uid')}>
-  <table class="outer">
-    <tr>
+  <fieldset>
+    <div class="control-group">
       <th colspan="2" style="text-align:center;">( <{$actionForm->get('uid')|xoops_user:user_name}> )<{$smarty.const._MD_USER_LANG_AVATAR_EDIT}></th>
-    </tr>
-    <tr>
-      <td colspan="2" class="<{cycle values="odd,even"}>" style="text-align:center;">
+    </div>
+    <div class="control-group">
+      <div class="controls">
         <{if $actionForm->get('uid')|xoops_user:user_avatar != "blank.gif"}>
           <img src="<{$smarty.const.XOOPS_UPLOAD_URL}>/<{$actionForm->get('uid')|xoops_user:user_avatar}>" alt="Avatar" title="Avatar" />
         <{else}>
@@ -30,43 +30,41 @@
         <{/if}>
         <br />
         <{$smarty.const._MD_USER_MESSAGE_OLDDELETED}>
-      <td>
-    </tr>
-    <tr>
-      <td class="head"><{$smarty.const._MD_USER_LANG_AVATAR_WIDTH_HIGHT}></td>
-      <td class="<{cycle values="odd,even"}>">
+      <div>
+    </div>
+    <div class="control-group">
+      <label for="avatar-width-height" class="control-label"><{$smarty.const._MD_USER_LANG_AVATAR_WIDTH_HIGHT}></label>
+      <div class="controls">
         <{$avatarWidth}> x <{$avatarHeight}> (px)
-      </td>
-    </tr>
-    <tr>
-      <td class="head"><{$smarty.const._MD_USER_LANG_AVATAR_MAXFILESIZE}></td>
-      <td class="<{cycle values="odd,even"}>">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="avatar-maxsize" class="control-label"><{$smarty.const._MD_USER_LANG_AVATAR_MAXFILESIZE}></label>
+      <div class="controls">
         <{$avatarMaxfilesize|number_format}> (bytes)
-      </td>
-    </tr>
-    <tr>
-      <td class="head"><{$smarty.const._MD_USER_LANG_AVATAR}></td>
-      <td class="<{cycle values="odd,even"}>">
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="uploadavatar" class="control-label"><{$smarty.const._MD_USER_LANG_AVATAR}></label>
+      <div class="controls">
         <{xoops_input type=file name=uploadavatar size=30}>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2" class="foot" style="text-align:center;">
-        <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton" />
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+    <div class="form-actions">
+      <button class="btn btn-primary" type="submit"><{$smarty.const._SUBMIT}></button>
+    </div>
+  </fieldset>
 </form>
 <{/if}>
 
 <form method="post" action="<{$xoops_url}>/edituser.php?op=avatarchoose">
   <{xoops_token form=$avatarSelectForm}>
   <{xoops_input type=hidden name=uid value=$avatarSelectForm->get('uid')}>
-  <table class="outer" style="text-align:center;">
-    <tr>
+  <table class="table" style="text-align:center;">
+    <div class="control-group">
       <th colspan="4"><{$smarty.const._MD_USER_LANG_AVATAR_LIST}></th>
-    </tr>
-    <tr>
+    </div>
+    <div class="control-group">
       <{foreach item=obj from=$systemAvatars}>
         <td class="<{cycle values="odd,even" name="class"}>" style="text-align:center;">
           <{if $obj->get('avatar_id') == 0}>
@@ -76,9 +74,9 @@
           <{/if}>
           <{$obj->getShow('avatar_name')}><br />
           <input name="avatar_id[<{$obj->getShow('avatar_id')}>]" type="submit" value="<{$smarty.const._MD_USER_LANG_SELECT}>" />
-        <{cycle name="table" values="</td>,</td>,</td>,</td></tr><tr>"}>
+        <{cycle name="table" values="</label>,</label>,</label>,</label></div><div class="control-group">"}>
       <{/foreach}>
-    </tr>
+    </div>
   </table>
 </form>
 

@@ -23,7 +23,7 @@
   <{xoops_input type=hidden name=confirm value=1}>
   <{xoops_input type=hidden name=batchjob value=1}>
   <{xoops_explaceholder control=UserSearchPagenaviHidden pagenavi=$pageNavi}> 
-<table class="outer">
+<table class="table">
   <tr>
     <th><{$smarty.const._MD_USER_LANG_UID}></th>
     <th><{$smarty.const._MD_USER_LANG_UNAME}></th>
@@ -75,7 +75,7 @@
   <tr>
     <td class="foot" colspan="6">
       <input type="submit" value="<{$smarty.const._SUBMIT}>" class="formButton" />
-      <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+      <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
     </td>
   </tr>
 </table>

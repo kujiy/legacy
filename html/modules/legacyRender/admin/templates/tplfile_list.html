@@ -50,7 +50,7 @@
       <{/if}>
     <{/foreach}>
   </select>
-  <input class="formButton" type="submit" value="<{$smarty.const._SUBMIT}>" />
+  <button class="btn btn-primary" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
 </form>
 </div>
 
@@ -66,7 +66,7 @@
 
 <form action="./index.php?action=TplfileList" method="post" enctype="multipart/form-data">
   <{xoops_token form=$actionForm}>
-  <table class="outer">
+  <table class="table">
     <tr>
       <th><{$smarty.const._AD_LEGACYRENDER_LANG_TPL_ID}>
         <a href="<{$pageNavi->renderUrlForSort()}>&amp;sort=<{$smarty.const.TPLFILE_SORT_KEY_TPL_ID}>"><img src="<{"icons/up.png"|theme}>" alt="<{$smarty.const._ASCENDING}>" title="<{$smarty.const._ASCENDING}>" /></a>

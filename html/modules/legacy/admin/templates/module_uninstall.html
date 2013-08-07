@@ -22,7 +22,7 @@
 <{xoops_token form=$actionForm}>
 <{xoops_input type=hidden name=dirname value=$module->get('dirname')}>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th colspan="3"><{$smarty.const._AD_LEGACY_LANG_MODUNINSTALL_CONF}></th>
   </tr>
@@ -76,7 +76,7 @@
   <tr>
     <td class="foot" colspan="3">
       <input class="formButton" type="submit" value="<{$smarty.const._AD_LEGACY_LANG_UNINSTALL}>" />
-      <input class="formButton" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel" />
+      <button class="btn" type="submit" value="<{$smarty.const._BACK}>" name="_form_control_cancel"><{$smarty.const._BACK}></button>
     </td>
   </tr>
 </table>

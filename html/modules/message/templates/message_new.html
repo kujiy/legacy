@@ -12,7 +12,7 @@
 <{/if}>
 
 <{if $mActionForm->get('Legacy_Event_User_Preview')!=""}>
-<table class="outer">
+<table class="table">
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE2}></td><td class="even"><{$mActionForm->getShow('uname')}></td></tr>
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE3}></td><td class="even"><{$mActionForm->getShow('title')}></td></tr>
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE4}></td><td class="even"><{$mActionForm->getShow('note', 'toShowTarea')}></td></tr>
@@ -23,7 +23,7 @@
 <form action="index.php?action=new" method="post">
 <{xoops_token form=$mActionForm}>
 <{xoops_input type=hidden name=mode}>
-<table class="outer">
+<table class="table">
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE2}></td><td class="even"><{xoops_input name=uname size=30 maxlength=50 value=$mActionForm->get('uname')}></td></tr>
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE3}></td><td class="even"><{xoops_input name=title size=50 maxlength=100 value=$mActionForm->get('title')}></td></tr>
 <tr><td class="head"><{$smarty.const._MD_MESSAGE_TEMPLATE4}></td><td class="even"><{xoops_dhtmltarea cols=60 rows=7 name=note value=$mActionForm->get('note')}></td></tr>

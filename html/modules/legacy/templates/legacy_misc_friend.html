@@ -1,5 +1,5 @@
 <{if $actionForm->hasError()}>
-<div class="errorMsg">
+<div class="alert alert-error">
   <ul>
     <{foreach item=message from=$actionForm->getErrorMessages()}>
       <li><{$message}></li>
@@ -9,43 +9,38 @@
 <{/if}>
 <form action="./misc.php?type=friend" method="post">
   <{xoops_token form=$actionForm}>
-  <table  width="100%" class="outer" cellspacing="1">
-    <tr>
-      <th colspan="2"><{$smarty.const._MB_LEGACY_LANG_RECOMMENDSITE}></th>
-    </tr>
-    <tr>
-      <td class='head'>
+  <fieldset>
+    <legend><{$smarty.const._MB_LEGACY_LANG_RECOMMENDSITE}></legend>
+    <div class="control-group">
+      <label for="yname" class="control-label">
         <input type='hidden' name='type' value='friend' />
         <{$smarty.const._MD_LEGACY_LANG_YNAME}>
-      </td>
-      <td class='even'>
+      </label>
+      <div class="controls">
         <{xoops_input type=text name=yname value=$actionForm->get('yname')}>
-      </td>
-    </tr>
-    <tr>
-      <td class='head'><{$smarty.const._MD_LEGACY_LANG_YMAIL}></td>
-      <td class='odd'>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="ymail" class="control-label"><{$smarty.const._MD_LEGACY_LANG_YMAIL}></label>
+      <div class="controls">
         <{xoops_input type=text name=ymail value=$actionForm->get('ymail')}>
-      </td>
-    </tr>
-    <tr>
-      <td class='head'><{$smarty.const._MD_LEGACY_LANG_FNAME}></td>
-      <td class='even'>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="fname" class="control-label"><{$smarty.const._MD_LEGACY_LANG_FNAME}></label>
+      <div class="controls">
         <{xoops_input type=text name=fname value=$actionForm->get('fname')}>
-      </td>
-    </tr>
-    <tr>
-      <td class='head'><{$smarty.const._MD_LEGACY_LANG_FMAIL}></td>
-      <td class='odd'>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="fmail" class="control-label"><{$smarty.const._MD_LEGACY_LANG_FMAIL}></label>
+      <div class="controls">
         <{xoops_input type=text name=fmail value=$actionForm->get('fmail')}>
-      </td>
-    </tr>
-    <tr>
-      <td class='head'>&nbsp;</td>
-      <td class='even'>
-        <input type='submit' value='<{$smarty.const._SUBMIT}>' />&nbsp;
-        <input value='<{$smarty.const._CLOSE}>' type='button' onclick='javascript:window.close();' />
-      </td>
-    </tr>
-  </table>
+      </div>
+    </div>
+    <div class="control-actions">
+      <button class="btn btn-primary" type="submit" value="<{$smarty.const._SUBMIT}>"><{$smarty.const._SUBMIT}></button>
+      <button class="btn" value="<{$smarty.const._CLOSE}>" type="button" onclick="javascript:window.close();"><{$smarty.const._CLOSE}></button>
+    </div>
+  </fieldset>
 </form>

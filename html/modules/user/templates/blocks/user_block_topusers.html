@@ -1,14 +1,14 @@
-<table cellspacing="1" class="outer">
+<table class="table">
   <{foreach item=user from=$block.users}>
-  <tr class="<{cycle values="even,odd"}>" valign="middle">
+  <tr valign="middle">
     <td><{$user.rank}></td>
-    <td align="center">
+    <td>
       <{if $user.avatar != ""}>
       <img src="<{$user.avatar}>" alt="" width="32" /><br />
       <{/if}>
       <a href="<{$xoops_url}>/userinfo.php?uid=<{$user.id}>"><{$user.name}></a>
     </td>
-    <td align="center"><{$user.posts}></td>
+    <td><{$user.posts}></td>
   </tr>
   <{/foreach}>
 </table>

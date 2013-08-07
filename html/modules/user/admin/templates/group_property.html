@@ -6,7 +6,7 @@
 
 <h3 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_PROPERTY}> ( <{$group->getShow('name')}> )</h3>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th>&nbsp;</th>
     <th><{$smarty.const._AD_USER_LANG_GROUP_GID}></th>
@@ -38,7 +38,7 @@
 <hr />
 <h4 class="admintitle"><{$smarty.const._AD_USER_LANG_GROUP_ASSIN_MEMBERS}></h4>
 
-<table class="outer">
+<table class="table">
   <tr>
     <th>&nbsp;</th>
     <th><{$smarty.const._MD_USER_LANG_UID}></th>
@@ -77,7 +77,7 @@
 
 <h5 class="admintitle"><{$smarty.const._AD_USER_LANG_PERM_MODULE_ACCESS}></h5>
 <{if $systemPermissions }>
-<table class="outer">
+<table class="table">
   <tr class="head">
     <th colspan="4"><{$smarty.const._AD_USER_LANG_PERM_SYSTEM_PERM_MODULE}></th>
   </tr>
@@ -100,7 +100,7 @@
 </table>
 <br />
 <{/if}>
-<table class="outer">
+<table class="table">
   <tr>
     <th colspan="4"><{$smarty.const._AD_USER_LANG_PERM_GROUP_PERM_MODULE}></th>
   </tr>
@@ -132,7 +132,7 @@
 <h5 class="admintitle"><{$smarty.const._AD_USER_LANG_PERM_BLOCK_ACCESS}></h5>
 
 <{foreach key=i item=permissions from=$blockPermissions}>
-<table class="outer">
+<table class="table">
   <tr>
     <th colspan="4"><{$smarty.const._AD_USER_LANG_PERM_GROUP_PERM_BLOCK}>
       <{if $i == 0}>( <{$smarty.const._LEFT}> )

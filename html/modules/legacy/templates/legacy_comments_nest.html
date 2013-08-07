@@ -1,6 +1,6 @@
 <{section name=i loop=$comments}>
 <br />
-<table cellspacing="1" class="outer">
+<table class="table">
   <tr>
     <th width="20%"><{$lang_poster}></th>
     <th><{$lang_thread}></th>
@@ -11,11 +11,11 @@
 <!-- start comment replies -->
 <{foreach item=reply from=$comments[i].replies}>
 <br />
-<table cellspacing="0" border="0">
+<table class="table">
   <tr>
     <td width="<{$reply.prefix}>"></td>
     <td>
-      <table class="outer" cellspacing="1">
+      <table class="table">
         <tr>
           <th width="20%"><{$lang_poster}></th>
           <th><{$lang_thread}></th>
