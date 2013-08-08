@@ -1,0 +1,290 @@
+@charset'UTF-8';
+
+/* ----- General ----- */
+
+body {
+    line-height: 2em;
+    font-size : 16px;
+}
+
+h2:before {
+    font-family: 'FontAwesome';
+    src: url('../font/fontawesome-webfont.eot?v=3.0.1');
+    src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'),
+    url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'),
+    url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
+    content: "\f0c8";
+}
+
+h2 {
+    font-size : 26px;
+    border-bottom: solid 1px #EEEEEE;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size : 21px;
+}
+
+h4{
+    font-size : 16px
+}
+
+li {
+    line-height : 1.8em;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+/* ----- HeadColumn ----- */
+header {
+    position:relative;
+    padding:0;
+    margin:0;
+}
+
+header .slogan {
+    height:    35px;
+    display:    block;
+}
+
+.header-image {
+    height:140px;
+    margin-top:1px;
+    margin-bottom:20px;
+}
+
+#PrimaryMenu {
+    margin-bottom: 10px;
+}
+
+#UserMenu {
+}
+
+#Login {
+}
+
+/* ----- Main Column ----- */
+#MainColumn {
+    min-height:10px;
+}
+
+/* ---- Nav menu ---- */
+
+/* Global Navi */
+#GlobalNav {
+    font-size: 180%;
+    letter-spacing: 0.1em;
+}
+
+
+/* ----- Block default ----- */
+dt.blockTitle {
+    display:block;
+    font-weight: bold;
+    font-size:15px;
+    padding:10px 5px 5px 10px;
+    border-left-width: 15px;
+}
+dd.blockContent {
+    padding:5px 5px 10px 10px;
+}
+
+/* ----- Side ----- */
+
+.sideColumn {
+    font-size : 14px;
+}
+
+.sideColumn dl {
+    margin-top: 0px;
+}
+
+/* ----- LeftSide ----- */
+/*
+#LeftSide {
+    width:100%;
+    float: left;
+    margin: 0;
+}
+*/
+#LeftSide dl {
+    padding:5px;
+}
+#LeftSide dt.blockTitle {
+    display:block;
+    font-weight: bold;
+    font-size: 14px;
+    border-left-width: 15px;
+}
+#LeftSide dd.blockContent {
+    display:block;
+    margin-bottom:10px;
+}
+
+/* ----- RightSide ----- */
+/*
+#RightSide {
+    width:100%;
+    float: right;
+    margin: 0;
+}
+*/
+#RightSide dl {
+    padding:5px;
+}
+#RightSide dt.blockTitle {
+    display:block;
+    font-weight: bold;
+    border-left-width: 15px;
+}
+#RightSide dd.blockContent {
+    display:block;
+}
+
+/* ----- CenterColumn ----- */
+/*
+#CenterColumn {
+    float: left;
+    margin: 5px 0;
+}
+*/
+#CenterColumn dl {
+    padding:5px;
+}
+
+/* ----- CenterCColumn ----- */
+#CenterCColumn {
+}
+
+/* ----- CenterLColumn ----- */
+#CenterLColumn {
+}
+
+/* ----- CenterRColumn ----- */
+#CenterRColumn {
+}
+
+#Content {
+}
+
+/* ----- for module CSS ----- */
+
+/* media-object */
+.media-list .media h1 {
+    font-size: 150%;
+    letter-spacing: 0.1em;
+}
+
+.media-list .media {
+    border-top: solid 1px #DDDDDD;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.media h1 {
+    line-height: 2em;
+    letter-spacing: 0.1em;
+}
+
+.media-attributes {
+    font-size: 90%;
+    margin-top: 10px;
+}
+
+.media-contents {
+    font-size: 13pt;
+}
+
+/*  for news & xf-section  */
+.item{
+    margin:10px 5px;
+}
+.itemHead{
+    padding: 3px 5px;
+}
+.itemInfo{
+    font-size: 85%;
+    text-align: right; padding: 3px;
+}
+
+.itemTitle {
+    font-size: 130%;
+    font-weight:bold;
+    font-variant: small-caps;
+}
+.itemTitle a {
+    font-weight:bold;
+}
+.itemPoster    {
+    font-size: 85%;
+}
+.itemPostDate{
+    font-size: 85%;
+}
+.itemStats{
+    font-size: 85%;
+}
+.itemBody{
+    padding: 2px 10px 2px 10px;
+}
+.itemText{
+    padding: 5px 10px;
+}
+.itemFoot{
+    text-align: right;
+    padding: 2px 5px;
+    font-size: 85%;
+}
+.itemAdminLink{
+    font-size: 90%;
+}
+.itemPermaLink{
+    font-size: 90%;
+}
+
+.pagenavi {
+    text-align:center;
+    padding:10px;
+}
+
+.pagenavi a {
+    padding:2px 5px;
+}
+.pagenavi b {
+    padding:2px;
+}
+
+.breadcrumb {
+    font-size: 90%;
+    padding: 5px 10px;
+}
+
+/*** TRPG Site Stylesheet ***/
+
+.publisher {
+    font-size: 9pt;
+}
+
+.publisher a {
+    margin-right: 10px;
+}
+
+.trpg-tag-select span {
+    margin-right: 5px;
+    margin-bottom:2px;
+}
+
+/*** Images ***/
+.corner-radius-3 {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.feedcenter dt,dd {
+    font-size : 14px;
+    line-height: 1.8em;
+}

@@ -1,0 +1,14 @@
+@charset'UTF-8';
+
+span.label-info {
+    background-color: #84b8d9;
+}
+
+footer {
+    background-color: #0088cc;
+    color: #ffffff;
+}
+
+footer a {
+    color : #dddddd;
+}

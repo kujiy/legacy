@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="<{$xoops_langcode}>">
+<head>
+<meta charset="<{$xoops_charset}>">
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="rating" content="general" />
+<meta name="author" content="" />
+<meta name="generator" content="XOOPS Cube" />
+
+<meta property="og:title" content="<{$xoops_pagetitle}>" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<{$xoops_url}>/" />
+<meta property="og:image" content="" />
+<meta property="og:description" content="" />
+
+<title><{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="alternate" type="application/atom+xml" title="" href="<{xoops_cooluri dirname=feed dataname=Atom}>" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/FontAwesome/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/color.css" />
+<{$xoops_module_header}>
+<script type="text/javascript" src="<{$xoops_url}>/themes/<{$xoops_theme}>/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div id="PrimaryMenu" class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav">
+        <li><a class="brand" href="<{$xoops_url}>/"><{$xoops_sitename}></a></li>
+        <{if $xoops_isadmin}>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i> Setting<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="<{xoops_cooluri dirname=category}>"><i class="icon-pencil"></i> category</a></li>
+          </ul>
+        </li>
+        <{/if}>
+      </ul>
+      <ul class="nav pull-right">
+        <li><a href="<{xoops_cooluri dirname=feed dataname=atom}>"><i class="icon-rss"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</div><!-- PrimaryMenu -->
+
+<header>
+  <div class="container">
+    <div class="header-image">
+      <div class="container">
+      </div>
+    </div>
+    <div id="GlobalNav">
+      <ul class="nav nav-pills">
+          <li><a href="<{$xoops_url}>/"><i class="icon-circle-arrow-right"></i> Menu1</a></li>
+          <li><a href="<{$xoops_url}>/"><i class="icon-circle-arrow-right"></i> Menu2</a></li>
+      </ul>
+    </div>
+    <hr>
+  </div>
+</header>
+
+<div id="Container" class="container">
+<{if ! $xoops_dirname}>
+<{include file="`$smarty.const.XOOPS_THEME_PATH`/`$xoops_theme`/body_top.html"}>
+<{else}>
+<{include file="`$smarty.const.XOOPS_THEME_PATH`/`$xoops_theme`/body_sub.html"}>
+<{/if}>
+</div>
+
+<footer>
+  <div class="container">
+    <{include file="`$smarty.const.XOOPS_THEME_PATH`/`$xoops_theme`/center.html"}>
+    <div id="FooterText">
+    <{$xoops_footer}> - <a href="http://xacro.jp/" target="_blank">Xacro</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
