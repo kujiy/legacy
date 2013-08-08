@@ -27,7 +27,9 @@
       <{elseif $def->get('type')=="uri"}>
       <{xoops_input type=text name=$def->getShow('field_name') value=$profileForm->get($def->getShow('field_name'), 1)}>
       <{/if}>
-      <div class="description"><{$def->getShow('description')}></div>
+      <{if $def->get('description')}>
+      <div class="help-block"><{$def->get('description')}></div>
+      <{/if}>
     </div>
   </div>
 	<{/foreach}>
